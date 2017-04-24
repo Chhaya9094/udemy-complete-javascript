@@ -96,7 +96,7 @@ if (23 == "23") { //more common to use === operator because it is safer to not d
 
 
 // Lecture: boolean logic and switch
-
+/*
 var age = 20;
 
 if (age < 20) {
@@ -123,3 +123,41 @@ switch (job) {
     default:
         console.log('John does something else.');
 }
+*/
+
+//////////////////////////////////////////////////////
+// Coding Challenge 1
+/*
+CODING CHALLENGE 1
+
+John and a friend invented a simple game where the player with the highest value of his height (in centimeters) plus five times his age wins (what a silly game :)
+
+1. Create variables for the heights and ages of two friends and assign them some values
+2. Calculate their scores
+3. Decide who wins and print the winner to the console. Include the score in the string that you output to the console. Don't forget that there can be a draw (both players with the same score).
+
+4. EXTRA: Add a third player and now decide who wins. Hint: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
+
+var heightJohn = 180;
+var ageJohn = 30;
+
+var heightFriend = 180;
+var ageFriend = 45;
+
+var heightThirdPlayer = 180;
+var ageThirdPlayer = 60;
+
+var scoreJohn = heightJohn + (5 * ageJohn);
+var scoreFriend = heightFriend + (5 * ageFriend);
+var scoreThirdPlayer = heightThirdPlayer + (5 * ageThirdPlayer);
+
+if (scoreJohn > scoreFriend && scoreJohn > scoreThirdPlayer) {
+    console.log("John wins! His score is: " + scoreJohn);
+} else if (scoreFriend > scoreJohn && scoreFriend > scoreThirdPlayer) {
+    console.log("Friend wins! Friend score is: " + scoreFriend);
+} else if (scoreThirdPlayer > scoreJohn && scoreThirdPlayer > scoreFriend) {
+    console.log("ThirdPlayer wins! ThirdPlayer score is: " + scoreThirdPlayer);
+} else {
+    console.log("It's a tie! Each had: " + scoreJohn);
+}
+*/
