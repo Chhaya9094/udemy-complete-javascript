@@ -1,3 +1,4 @@
+//////////////////////////////////////////////////////
 // Lecture: variables
 /*
 var name = 'John';
@@ -14,6 +15,7 @@ console.log(fullAge);
 */
 
 
+//////////////////////////////////////////////////////
 // Lecture: variables 2
 /*
 var name = 'John';
@@ -43,6 +45,7 @@ alert(name + ' is ' + age + ' year old ' + job + '. Is he married? ' + isMarried
 */
 
 
+//////////////////////////////////////////////////////
 // Lecture: operators
 /*
 var now = 2017
@@ -68,6 +71,7 @@ console.log(ageMark);
 */
 
 
+//////////////////////////////////////////////////////
 // Lecture: if/else statements
 /*
 var name = 'John';
@@ -95,6 +99,7 @@ if (23 == "23") { //more common to use === operator because it is safer to not d
 */
 
 
+//////////////////////////////////////////////////////
 // Lecture: boolean logic and switch
 /*
 var age = 20;
@@ -161,3 +166,81 @@ if (scoreJohn > scoreFriend && scoreJohn > scoreThirdPlayer) {
     console.log("It's a tie! Each had: " + scoreJohn);
 }
 */
+
+
+//////////////////////////////////////////////////////
+// Lecture: functions
+/*
+function calculateAge(yearOfBirth) {
+    var age = 2017 - yearOfBirth;
+    return age;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1969);
+var ageMary = calculateAge(1948);
+
+console.log(ageJohn);
+console.log(ageMike);
+console.log(ageMary);
+
+function yearsUntilRetirement(name, year) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+
+    if (retirement >= 0) {
+        console.log(name + ' retires in ' + retirement + ' years.');
+    } else {
+        console.log(name + ' is already retired.');
+    }
+}
+
+yearsUntilRetirement('John', 1990);
+yearsUntilRetirement('Mike', 1969);
+yearsUntilRetirement('Mary', 1948);
+*/
+
+
+//////////////////////////////////////////////////////
+// Lecture: statements and expressions
+/*
+function someFunc(par) {
+    //code
+} //function statement - performs an action (no output)
+
+var someFunc = function(par) {
+    //code
+} //function expression - produces value (outcome)
+
+//Expressions
+3 + 4;
+var x = 3;
+
+//Statements
+if (x === 5) {
+    //do something
+}
+*/
+
+
+//////////////////////////////////////////////////////
+// Lecture: arrays
+
+var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[1]);
+names[1] = 'Ben';
+console.log(names);
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('blue');
+john.unshift('Mr.');
+john.pop(); //remove last element
+john.shift(); //remove first element
+console.log(john);
+
+if (john.indexOf('teacher') === -1 ) {
+    console.log('John is NOT a teacher.');
+}
