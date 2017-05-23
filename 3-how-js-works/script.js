@@ -74,11 +74,39 @@ function third() {
 ///////////////////////////////////////
 // Lecture: The this keyword
 
+//console.log(this);
 
+/*
+calculateAge(1985);
 
+function calculateAge(year) {
+    console.log(2017 - year);
+    console.log(this);
+}
+*/
 
+var john = {
+    name: 'John',
+    yearofBirth: 1990,
+    calculateAge: function() {
+        console.log(this);
+        console.log(2017 - this.yearofBirth);
 
+        /*
+        function innerFunction() { // even though this is written inside of an object, still a regular function
+            console.log(this); // thus will return the global object (the window object, in the browser)
+        }
+        innerFunction();
+        */
+    }
+}
 
+john.calculateAge();
 
+var mike = {
+    name: 'Mike',
+    yearofBirth: 1984
+};
 
-
+mike.calculateAge = john.calculateAge; // method-borrowing, treat function as variable
+mike.calculateAge();
