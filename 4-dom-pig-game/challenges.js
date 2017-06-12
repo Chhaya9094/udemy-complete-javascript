@@ -49,6 +49,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() { // an
     }
 }); 
 
+document.querySelector('.btn-set').addEventListener('click', function() {
+    winningScore = document.getElementById("set_score").value;
+    document.getElementById("set_score").disabled = true;
+});
+
 document.querySelector('.btn-hold').addEventListener('click', function() {
     if (gamePlaying) {
         // add CURRENT score to GLOBAL score
@@ -58,8 +63,19 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         // update the UI 
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
+        var input = document.querySelector('.final-score').value;
+        var winningScore;
+
+        // undefined, 0, null or "" are COERCED to false
+        // anything else is COERCED to true
+        if(input) {
+            winningScore = input;
+        } else {
+            winningScore = 100;
+        }
+
         // check if player won the game
-        if (scores[activePlayer] >= 100) {
+        if (scores[activePlayer] >= winningScore) {
             // player has won the game
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
