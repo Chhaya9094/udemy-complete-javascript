@@ -1,3 +1,3 @@
-# udemy-complete-javascript > dom-pig-game
+# udemy-complete-javascript
 
-View at: https://andrewrgoss.com/udemy-complete-javascript/dom-pig-game.
+View at: https://andrewrgoss.com/udemy-complete-javascript
