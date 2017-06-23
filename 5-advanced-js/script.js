@@ -342,3 +342,11 @@ c) correct answer (I would use a number for this)
 
 11. Display the score in the console. Use yet another method for this.
 */
+
+var Question = function(question, answerChoices, correctAnswer) {
+    this.question = question;
+    this.answerChoices = answerChoices;
+    this.correctAnswer = correctAnswer;
+}
+
+var question = new Question('John', 1990, 'Teacher'); // create new object using the function constructor (instantiation - instance of 'Person' object)
